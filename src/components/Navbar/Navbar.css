@@ -1,0 +1,62 @@
+.navbar-container{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* ============ Navbar Left ============ */
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-left span{
+    font-weight: 400;
+    font-size: 14px;
+    padding-right: .75rem;;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    border: .5px solid lightgray;
+}
+
+.search-container input{
+    border: none;
+}
+
+.search-icon{
+    font-size: 10px;
+}
+
+
+/* ============ End Navbar Left ============ */
+
+
+/* ============ Navbar Center ============ */
+
+.navbar-center a {
+    text-decoration: none;
+}
+
+.navbar-center h1 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ============ End Navbar Center ============ */
+
+
+/* ============ Navbar Right ============ */
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
