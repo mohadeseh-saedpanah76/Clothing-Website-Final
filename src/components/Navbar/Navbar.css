@@ -1,9 +1,12 @@
 .navbar-container{
     height: 60px;
+    padding: 10px 20px;
+}
+
+.wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
 }
 
 /* ============ Navbar Left ============ */
@@ -58,5 +61,10 @@
 .navbar-right{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content:space-around;
+}
+
+.menu-item {
+    color: black;
+    text-decoration: none;
 }

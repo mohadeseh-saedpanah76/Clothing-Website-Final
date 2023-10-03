@@ -1,4 +1,5 @@
-import { Search, ShoppingBag } from '@mui/icons-material'
+import { Search,ShoppingCart  } from '@mui/icons-material'
+import { Badge } from '@mui/material'
 
 import {Link} from 'react-router-dom'
 
@@ -8,6 +9,7 @@ const Navbar = () => {
   return (
     <div className='navbar-container'>
 
+      <div className='wrapper'>
       <div className='navbar-left'>
         <span>EN</span>
 
@@ -27,18 +29,23 @@ const Navbar = () => {
 
       <div className='navbar-right'>
           <div className='menu-item'>
-            <Link to='/register'>REGISTER</Link>
+            <Link to='/register' style={{color:'black' , textDecoration:'none'}}>REGISTER</Link>
           </div>
           
           <div className='menu-item'>
-          <Link to='login'>SIGN IN</Link>
+          <Link to='/login' style={{color:'black' , textDecoration:'none'}}>SIGN IN</Link>
           </div>
           
           <div className='menu-item'>
-            <Link><ShoppingBag/></Link>
+            <Link style={{color:'black' , textDecoration:'none'}} to='/cart'>
+              <Badge color="secondary" badgeContent={4}>
+                <ShoppingCart />
+              </Badge></Link>
           </div>
  
       </div>
+      </div>
+
     </div>
   )
 }
