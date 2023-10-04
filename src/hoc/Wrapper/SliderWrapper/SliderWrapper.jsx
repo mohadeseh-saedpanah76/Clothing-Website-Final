@@ -1,10 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const SliderWrapper = ({product}) => {
+import {Wrapper} from '../../../styledComponents/slider/Wrapper'
+import {Slide} from '../../../styledComponents/slider/Slide'
+
+
+const SliderWrapper = ({product , slideindex}) => {
   return (
-    <div >
-        <div className='slide'>
+    <Wrapper slideindex={slideindex}>
+        <Slide bg={product.bg}>
             <div className='image-Container'>
                <image src={product.image}/>
             </div>
@@ -21,8 +25,8 @@ const SliderWrapper = ({product}) => {
                   </button>
                 </Link>
             </div>
-        </div>
-    </div>
+        </Slide>
+    </Wrapper>
   )
 }
 

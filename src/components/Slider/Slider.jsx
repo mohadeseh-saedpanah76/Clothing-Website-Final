@@ -1,7 +1,9 @@
 import { ArrowCircleLeft, ArrowCircleRight } from '@mui/icons-material'
 import React , {useState} from 'react'
 
-import Wrapper from '../../hoc/Wrapper/SliderWrapper'
+
+import SliderWrapper from '../../hoc/Wrapper/SliderWrapper/SliderWrapper'
+import {Arrow} from '../../styledComponents/slider/Arrow'
 
 import {sliderItems} from '../../data'
 
@@ -24,17 +26,17 @@ const Slider = () => {
  
   return (
     <div className='slider-container'>
-      <div className='arrow' onClick={()=>sliderHandler('left')}>
-          <ArrowCircleLeft></ArrowCircleLeft>
-      </div>
+      <Arrow direction='left' onClick={()=>sliderHandler('left')}>
+        <ArrowCircleLeft></ArrowCircleLeft>
+      </Arrow>
 
       {sliderItems.map((item)=>{
-        return <Wrapper product={item} key={item.id}/>
+        return <SliderWrapper slideindex={slideIndex} product={item} key={item.id} />
       })}
 
-      <div className='arrow' onClick={()=>sliderHandler('right')}>
-          <ArrowCircleRight></ArrowCircleRight>
-      </div>
+      <Arrow direction='right' onClick={()=>sliderHandler('right')}>
+        <ArrowCircleRight></ArrowCircleRight>
+      </Arrow>  
     </div>
   )
 }
