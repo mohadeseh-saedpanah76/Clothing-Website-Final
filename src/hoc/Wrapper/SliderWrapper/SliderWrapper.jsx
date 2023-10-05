@@ -4,13 +4,14 @@ import {Link} from 'react-router-dom'
 import {Wrapper} from '../../../styledComponents/slider/Wrapper'
 import {Slide} from '../../../styledComponents/slider/Slide'
 
+import './SliderWrapper.css'
 
 const SliderWrapper = ({product , slideindex}) => {
   return (
     <Wrapper slideindex={slideindex}>
         <Slide bg={product.bg}>
             <div className='image-Container'>
-               <image src={product.image}/>
+               <img src={product.image}></img>
             </div>
             <div className='info-container'>
                 <h1>

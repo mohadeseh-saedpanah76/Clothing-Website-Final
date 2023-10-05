@@ -1,32 +1,33 @@
 .navbar-container{
     height: 60px;
-    padding: 10px 20px;
 }
 
 .wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 20px;
 }
 
 /* ============ Navbar Left ============ */
 
 .navbar-left{
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .navbar-left span{
-    font-weight: 400;
     font-size: 14px;
     padding-right: .75rem;;
+    cursor: pointer;
 }
 
 .search-container{
     display: flex;
     align-items: center;
     border: .5px solid lightgray;
+    margin-left:5px;
 }
 
 .search-container input{
@@ -42,6 +43,9 @@
 
 
 /* ============ Navbar Center ============ */
+.navbar-center{
+    flex: 1;
+}
 
 .navbar-center a {
     text-decoration: none;
@@ -59,12 +63,16 @@
 /* ============ Navbar Right ============ */
 
 .navbar-right{
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content:flex-end;
 }
 
 .menu-item {
     color: black;
     text-decoration: none;
+    font-size: 14px;
+    margin-left: 25px;
+    cursor: pointer;
 }
