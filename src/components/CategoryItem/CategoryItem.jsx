@@ -1,9 +1,19 @@
-import React from 'react'
+import './CategoryItem.css'
 
-const CategoryItem = () => {
+const CategoryItem = ({item}) => {
   return (
-    <div>
-      
+    <div className='categoryitem-container'>
+      <img src={item.image}/>
+
+      <div className='categoryitem-info'>
+        <h1>
+          {item.title}
+        </h1>
+
+        <button>
+          SHOP NOW
+        </button>
+      </div>
     </div>
   )
 }
