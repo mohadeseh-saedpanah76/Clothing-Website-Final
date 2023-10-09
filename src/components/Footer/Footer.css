@@ -1,0 +1,70 @@
+.footer-container{
+    display: flex;
+}
+
+/* ============ Footer Left ============ */
+
+.footer-container .left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.footer-container .left p{
+    margin: 20px 0px;
+}
+
+.social-container{
+    display: flex;
+}
+
+.social-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+/* ============ Footer Center ============ */
+
+.footer-container .center{
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-container .center h3{
+    margin-bottom: 30px;
+}
+
+.link-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-item{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+/* ============ Footer Right ============ */
+.footer-container .right{
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-item{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.payment{
+    width: 50%;
+}
