@@ -1,5 +1,6 @@
 import { HeartBroken, Search, ShoppingCart } from '@mui/icons-material'
 
+import './Product.css'
 
 const Product = ({item}) => {
   return (
@@ -16,10 +17,10 @@ const Product = ({item}) => {
           <div className='icon'>
             <HeartBroken/>
           </div>
-        </div>
-        <h3>
+          <h3>
           {item.title}
         </h3>
+        </div>
       </div>
     </div>
   )
