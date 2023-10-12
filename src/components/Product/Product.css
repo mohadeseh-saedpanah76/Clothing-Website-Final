@@ -23,4 +23,50 @@
     justify-content: center;
     transition: all .5s ease;
     cursor: pointer;
+    flex-direction: column;
+}
+.icon-list{
+    display: flex;
+}
+
+.info h3{
+    color: rgb(209, 238, 130);
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.product-container:hover .info{
+    opacity: 1;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+
+.product-img{
+    height: 85%;
+    width: 75%;
+    z-index: 2;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: all .5s ease-in;
+}
+
+.icon:hover{
+    background-color: #e9f5f5;
+    transform: scale(1.1);
 }
