@@ -4,7 +4,7 @@ import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
-import ProductList from './pages/ProductList/ProductList'
+import Shop from './pages/Shop/Shop'
 
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
-        <Route path='/products' element={<ProductList/>}/>
+        <Route path='/products' element={<Shop/>}/>
       </Routes>
     </Router>
   )

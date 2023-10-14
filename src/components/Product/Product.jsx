@@ -1,4 +1,4 @@
-import { HeartBroken, Search, ShoppingCart } from '@mui/icons-material'
+import { FavoriteRounded, Search, ShoppingCart } from '@mui/icons-material'
 
 import './Product.css'
 
@@ -16,12 +16,12 @@ const Product = ({item}) => {
               <Search/>
             </div>
             <div className='icon'>
-              <HeartBroken/>
+              <FavoriteRounded/>
             </div>
          </div>
-         <h3>
+         {/* <h3>
           {item.title}
-        </h3>
+        </h3> */}
         </div>
       
     </div>
