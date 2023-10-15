@@ -5,6 +5,7 @@ import Cart from './pages/Cart/Cart'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Shop from './pages/Shop/Shop'
+import ProductDetails from './pages/ProductDetails/ProductDetails'
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/products' element={<Shop/>}/>
+        <Route path='/product' element={<ProductDetails/>}/>
       </Routes>
     </Router>
   )

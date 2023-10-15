@@ -1,8 +1,11 @@
+
+
 import { FavoriteRounded, Search, ShoppingCart } from '@mui/icons-material'
 
 import './Product.css'
 
 const Product = ({item}) => {
+  
   return (
     <div className='product-container'>
       <div className='circle'></div>

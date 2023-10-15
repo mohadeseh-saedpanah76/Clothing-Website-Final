@@ -10,6 +10,7 @@ import Loading from "../../components/Loading/Loading"
 import Product from "../../components/Product/Product"
 
 import './Shop.css'
+import { Link } from 'react-router-dom'
 const Shop = () => {
   const [Products , setProducts] = useState([])
   const [loading , setLoading] = useState(true)
@@ -26,7 +27,9 @@ const Shop = () => {
     <div>
       <Announcement/>
       <Navbar/>
-
+      <h1 className='shop-text'>
+        SHOPPING
+      </h1>
       <div className='filter-container'>
         <div className='filter-item'>
           <span className='filter-text'>
@@ -68,7 +71,11 @@ const Shop = () => {
       <div className='shop-container'>
         {loading ? <Loading> در حال دریافت محصولات</Loading>: 
         Products.map((item)=>{
-          return <Product item={item} key={item.id}/>
+          return (
+            <Link to='/product'>
+              <Product item={item} key={item.id}/>
+            </Link>
+           )
         })}
       </div>
 
