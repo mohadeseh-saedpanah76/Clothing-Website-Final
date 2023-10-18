@@ -9,6 +9,7 @@ import ProductDetails from './pages/ProductDetails/ProductDetails'
 
 
 const App = () => {
+  
   return (
     <Router>
       <Routes>
@@ -17,7 +18,7 @@ const App = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/products' element={<Shop/>}/>
-        <Route path='/product' element={<ProductDetails/>}/>
+        <Route path='/product/:id' element={<ProductDetails/>}/>
       </Routes>
     </Router>
   )

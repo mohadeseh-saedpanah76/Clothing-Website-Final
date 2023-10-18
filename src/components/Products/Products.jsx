@@ -1,5 +1,7 @@
 import axios from "axios"
 
+import { Link } from "react-router-dom"
+
 import {useState} from "react"
 import Loading from "../Loading/Loading"
 
@@ -24,7 +26,11 @@ const Products = () => {
     <div className="products-container">
     {loading ? <Loading> در حال دریافت محصولات</Loading>: 
       Products.map((item)=>{
-        return <Product item={item} key={item.id}/>
+        return (
+          <Link to='/product/:id'>
+            <Product item={item} key={item.id}/>
+          </Link>
+        )
       })}
     </div>
   )

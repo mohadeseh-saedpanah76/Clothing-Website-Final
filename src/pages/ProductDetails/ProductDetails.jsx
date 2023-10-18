@@ -1,31 +1,56 @@
 import { Add, Remove } from '@mui/icons-material'
-import React from 'react'
+
+import React , {useState} from 'react'
+import { useParams } from 'react-router-dom'
+
+
+import axios from 'axios'
+
 import Announcement from '../../components/Announcement/Announcement'
 import { FilterColor } from '../../components/FilterColor/FilterColor'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import Newsletter from '../../components/Newsletter/Newsletter'
 
+import './ProductDetails.css'
+
+
+let productDetails = []
+
 const ProductDetails = () => {
-  // const [Product , setProduct] = useState({})
+
+  const params = useParams()
+
+  const [Product , setProduct] = useState({})
+
+  axios.get(`http://localhost:8000/products/${params.id}`)
+  .then((response)=>{
+    const product = response.data
+    
+    setProduct(product)
+  })
+
+  productDetails.push(Product)
+
+  console.log(Product)
   return (
     <div>
-      <Announcement/>
       <Navbar/>
+      <Announcement/>
        <div className='product-wrapper'>
-        <div className='img-container'>
-            <img/>
-          </div>
-          <div className='info-container'>
-            <h1>Denim Jumpsuit</h1>
+        {productDetails.map((item)=>{
+          return (
+            <div>
+                  <div className='img-container'>
+                <img src={item.url}/>
+               </div>
+            <div className='info-container-product'>
+            <h1>{item.title}</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nulla, dolores. Cupiditate soluta rerum itaque. Dolorem
-                ullam ipsum et velit tenetur dolores hic reiciendis molestias
-                fugiat vel fuga vero, quis vitae.
+                {item.desc}
             </p>
             <span>
-              $20
+              {item.price}
             </span>
             <div className='filter-container'>
               <div className='filter-item'>
@@ -55,6 +80,11 @@ const ProductDetails = () => {
               <button>ADD TO CART</button>
             </div>
           </div>
+
+            </div>
+              
+            )
+        })}
        </div>
       <Newsletter/>
       <Footer/>

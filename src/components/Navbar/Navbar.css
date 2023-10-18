@@ -34,6 +34,10 @@
     border: none;
 }
 
+.search-container input:focus{
+   outline: none;
+}
+
 .search-icon{
     font-size: 10px;
 }
