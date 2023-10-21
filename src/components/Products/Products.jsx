@@ -27,7 +27,7 @@ const Products = () => {
     {loading ? <Loading> در حال دریافت محصولات</Loading>: 
       Products.map((item)=>{
         return (
-          <Link to='/product/:id'>
+          <Link to={`/product/${item.id}`}>
             <Product item={item} key={item.id}/>
           </Link>
         )

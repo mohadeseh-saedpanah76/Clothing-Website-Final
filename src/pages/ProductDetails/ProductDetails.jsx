@@ -15,8 +15,6 @@ import Newsletter from '../../components/Newsletter/Newsletter'
 import './ProductDetails.css'
 
 
-let productDetails = []
-
 const ProductDetails = () => {
 
   const params = useParams()
@@ -30,27 +28,21 @@ const ProductDetails = () => {
     setProduct(product)
   })
 
-  productDetails.push(Product)
-
-  console.log(Product)
   return (
     <div>
       <Navbar/>
       <Announcement/>
        <div className='product-wrapper'>
-        {productDetails.map((item)=>{
-          return (
-            <div>
-                  <div className='img-container'>
-                <img src={item.url}/>
-               </div>
+            <div className='img-container'>
+                <img src={Product.url}/>
+            </div>
             <div className='info-container-product'>
-            <h1>{item.title}</h1>
+            <h1>{Product.title}</h1>
             <p>
-                {item.desc}
+                {Product.desc}
             </p>
             <span>
-              {item.price}
+              {Product.price}
             </span>
             <div className='filter-container'>
               <div className='filter-item'>
@@ -67,7 +59,6 @@ const ProductDetails = () => {
                   <option>M</option>
                   <option>L</option>
                   <option>XL</option>
-
                 </select>
               </div>
             </div>
@@ -79,15 +70,10 @@ const ProductDetails = () => {
               </div>
               <button>ADD TO CART</button>
             </div>
-          </div>
-
-            </div>
-              
-            )
-        })}
+          </div>      
        </div>
-      <Newsletter/>
-      <Footer/>
+      {/* <Newsletter/>
+      <Footer/> */}
     </div>
   )
 }
