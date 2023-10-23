@@ -1,6 +1,6 @@
-import React ,{useState} from 'react'
+import React ,{ useEffect} from 'react'
 
-import axios from "axios"
+import { useSelector , useDispatch } from 'react-redux'
 
 import Announcement from '../../components/Announcement/Announcement'
 import Navbar from '../../components/Navbar/Navbar'
@@ -9,20 +9,25 @@ import Footer from '../../components/Footer/Footer'
 import Loading from "../../components/Loading/Loading"
 import Product from "../../components/Product/Product"
 
+import { productListAction } from '../../action/productAction'
+
 import './Shop.css'
 import { Link } from 'react-router-dom'
+
 const Shop = () => {
-  const [Products , setProducts] = useState([])
-  const [loading , setLoading] = useState(true)
+  const dispatch = useDispatch()
   
-  axios
-  .get("http://localhost:8000/products")
-  .then((response)=>{
-    
-    const products = response.data;
-    setProducts(products)
-    setLoading(false)
-  })
+
+  const productList = useSelector((state)=>state.productList)
+
+  const {loading , products} = productList
+  
+  useEffect(()=>{
+
+    dispatch(productListAction())
+
+  },[dispatch])
+ 
   return (
     <div>
       <Announcement/>
@@ -70,7 +75,7 @@ const Shop = () => {
       </div>
       <div className='shop-container'>
         {loading ? <Loading> در حال دریافت محصولات</Loading>: 
-        Products.map((item)=>{
+        products.map((item)=>{
           return (
             <Link to={`/product/${item.id}`}>
               <Product item={item} key={item.id}/>
