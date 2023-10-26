@@ -5,10 +5,32 @@ import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import { TopButton } from '../../components/TopButton/TopButton'
 
+import { useEffect } from 'react'
+import { useSelector , useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom'
+
+import { addToCart } from '../../action/cartAction'
+
 import './Cart.css'
 
 const Cart = () => {
-  return (
+
+ const {id} = useParams()
+ const dispatch  = useDispatch()
+ 
+ const cart = useSelector(state=>state.cart) 
+
+ const {cartItems} = cart
+
+ console.log(cartItems)
+ useEffect(()=>{
+    if(id){
+      dispatch(addToCart(id))
+    }
+ },[dispatch , id])
+
+  
+ return (
     <div className='cart-container'>
       <Announcement/>
       <Navbar/>

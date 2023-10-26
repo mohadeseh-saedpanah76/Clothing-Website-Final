@@ -1,7 +1,8 @@
 import { Add, Remove } from '@mui/icons-material'
 
 import React , { useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, redirect, useNavigate } from 'react-router-dom'
+
 
 import { useSelector , useDispatch } from 'react-redux'
 
@@ -25,13 +26,16 @@ const ProductDetails = () => {
   const {loading , product} = productDetails
 
   const params = useParams()
+  const history = useNavigate()
 
 
   useEffect(()=>{
     dispatch(productDetailsAction(params.id))
   },[dispatch, params])
 
-
+  const addToCartHandle = ()=>{
+    history(`/cart/${params.id}`)
+  }
   return (
     <div>
       <Navbar/>
@@ -52,18 +56,18 @@ const ProductDetails = () => {
           <div className='filter-container'>
             <div className='filter-item'>
               <span>Color</span>
-              <FilterColor color='black'/>
-              <FilterColor color='darkblue'/>
-              <FilterColor color='gray'/>
+              <FilterColor color={product.color1}/>
+              <FilterColor color={product.color2}/>
+              <FilterColor color={product.color3}/>
             </div>
             <div className='filter-item'>
               <span>Size</span>
               <select>
-                <option>XS</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+                <option>{product.size1}</option>
+                <option>{product.size2}</option>
+                <option>{product.size3}</option>
+                <option>{product.size4}</option>
+                <option>{product.size5}</option>
               </select>
             </div>
           </div>
@@ -73,7 +77,7 @@ const ProductDetails = () => {
               <span>1</span>
               <Add/>
             </div>
-            <button>ADD TO CART</button>
+            <button onClick={addToCartHandle}>ADD TO CART</button>
           </div>
         </div>      
     </div>
