@@ -1,4 +1,4 @@
-import { Add, Remove } from '@mui/icons-material'
+import { Add, Delete, Remove } from '@mui/icons-material'
 import React from 'react'
 import Announcement from '../../components/Announcement/Announcement'
 import Footer from '../../components/Footer/Footer'
@@ -16,18 +16,22 @@ import './Cart.css'
 const Cart = () => {
 
  const {id} = useParams()
+ 
  const dispatch  = useDispatch()
  
  const cart = useSelector(state=>state.cart) 
 
  const {cartItems} = cart
 
- console.log(cartItems)
  useEffect(()=>{
     if(id){
       dispatch(addToCart(id))
     }
  },[dispatch , id])
+
+ const removeFromCartHandler =(id)=>{
+    console.log("remove")
+ }
 
   
  return (
@@ -41,22 +45,24 @@ const Cart = () => {
         <div className='cart-top'>
           <TopButton >CONTINUE SHOPPING</TopButton>
           <div className='top-texts'>
-            <span className='top-text'>Shopping Bag(2)</span>
+            <span className='top-text'>Shopping Bag : {cartItems.length}</span>
             <span className='top-text'>Your Wishlist(0)</span>
           </div>
           <TopButton type='filled'>CHECKOUT NOW</TopButton>
         </div>
 
-        <div className='cart-bottom'>
-          <div className='cart-info'>
-            <div className='container-product'>
+        {cartItems.length === 0 ? (<p> سبد خرید شما خالی است</p>) : (
+            <div className='cart-bottom'>
+            <div className='cart-info'>
+              {cartItems.map((item)=>(
+                <div className='container-product' key={item.product}>
                 <div className='product-detail'>
-                  <img src="/"/>
+                  <img src={item.image}/>
                   <div className='details'>
-                    <span className='product-name'><b>Product:</b>T-SHIRT</span>
-                    <span className='product-id'><b>ID:</b> 93813718293</span>
-                    <div className='product-color'></div>
-                    <span className='product-size'><b>Size:</b>XL</span>
+                    <span className='product-name'><b>Product:</b>{item.name}</span>
+                    <span className='product-id'><b>ID:</b>{item.productId}</span>
+                    {/* <div className='product-color'></div>
+                    <span className='product-size'><b>Size:</b>XL</span> */}
                   </div>
                 </div>
                 <div className='price-detail'>
@@ -65,15 +71,24 @@ const Cart = () => {
                     <div className='product-amount'>1</div>
                     <Remove/>
                   </div>
-                  <span className='product-price'>$50</span>
+                  <span className='product-price'>{item.price}</span>
+                  <button onClick={()=> removeFromCartHandler(item.product)}>
+                  <Delete/>
+                  </button>
                 </div>
-            </div>
-          </div>
 
-          {/* <div className='cart-summary'>
-            <h1>ORDER SUMMARY</h1>
-          </div> */}
-        </div>
+               
+            </div>
+              ))}
+            </div>
+  
+            {/* <div className='cart-summary'>
+              <h1>ORDER SUMMARY</h1>
+            </div> */}
+          </div>
+        ) }
+
+      
       </div>
       <Footer/>
     </div>

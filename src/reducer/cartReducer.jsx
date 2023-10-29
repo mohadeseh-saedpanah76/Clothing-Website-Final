@@ -6,8 +6,9 @@ export const cartReducer = (state = {cartItems :[]} , action)=>{
 
             // شمارنده آی محصولی است که الان می خواهد به سبد خرید اضافه شود
             // ابتدا چک می شود تا از قبل در سبد خرید وجود نداشته باشد
-            const existingItem = state.cartItems.find((i)=>
-                    i.product === item.product                
+            const existingItem = state.cartItems.find(
+               (i)=> i.product === item.product
+              
             )
 
             if(existingItem){

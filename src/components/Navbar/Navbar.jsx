@@ -38,7 +38,7 @@ const Navbar = () => {
           
           <div className='menu-item'>
             <Link style={{color:'black' , textDecoration:'none'}} to='/cart'>
-              <Badge color="secondary" badgeContent={4}>
+              <Badge color="secondary">
                 <ShoppingCart />
               </Badge></Link>
           </div>
