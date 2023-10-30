@@ -1,4 +1,4 @@
-import { Add, Delete, Remove } from '@mui/icons-material'
+import { Add ,HighlightOff, Remove } from '@mui/icons-material'
 import React from 'react'
 import Announcement from '../../components/Announcement/Announcement'
 import Footer from '../../components/Footer/Footer'
@@ -9,7 +9,7 @@ import { useEffect } from 'react'
 import { useSelector , useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import { addToCart } from '../../action/cartAction'
+import { addToCart , removeFromCart} from '../../action/cartAction'
 
 import './Cart.css'
 
@@ -30,7 +30,7 @@ const Cart = () => {
  },[dispatch , id])
 
  const removeFromCartHandler =(id)=>{
-    console.log("remove")
+    dispatch(removeFromCart(id))
  }
 
   
@@ -51,7 +51,7 @@ const Cart = () => {
           <TopButton type='filled'>CHECKOUT NOW</TopButton>
         </div>
 
-        {cartItems.length === 0 ? (<p> سبد خرید شما خالی است</p>) : (
+        {cartItems.length === 0 ? (<p className="empty-cart"> Your shopping cart is empty</p>) : (
             <div className='cart-bottom'>
             <div className='cart-info'>
               {cartItems.map((item)=>(
@@ -71,10 +71,15 @@ const Cart = () => {
                     <div className='product-amount'>1</div>
                     <Remove/>
                   </div>
-                  <span className='product-price'>{item.price}</span>
-                  <button onClick={()=> removeFromCartHandler(item.product)}>
-                  <Delete/>
-                  </button>
+                  <div>
+                   <span className='product-price'>{item.price}</span>
+                  </div>
+                  <div>
+                    <button onClick={()=> removeFromCartHandler(item.product)}>
+                    <HighlightOff/>
+                    </button>
+                  </div>
+
                 </div>
 
                
@@ -82,9 +87,14 @@ const Cart = () => {
               ))}
             </div>
   
-            {/* <div className='cart-summary'>
+            <div className='cart-summary'>
               <h1>ORDER SUMMARY</h1>
-            </div> */}
+              <div className='summary-item'>
+                <span> Total: {cartItems.reduce((acc , item)=> acc + item.price , 0)}</span>
+                <span></span>
+              </div>
+              <button>CHECKOUT NOW</button>
+            </div>
           </div>
         ) }
 
