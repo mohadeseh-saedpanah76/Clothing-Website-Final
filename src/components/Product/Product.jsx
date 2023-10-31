@@ -1,6 +1,6 @@
 
 
-import { FavoriteRounded, Search, ShoppingCart } from '@mui/icons-material'
+import { FavoriteRounded, Search } from '@mui/icons-material'
 
 import './Product.css'
 
@@ -12,9 +12,6 @@ const Product = ({item}) => {
         <img src={item.url} className='product-img'/>
         <div className='info'>
          <div className='icon-list'>
-          <div className='icon'>
-              <ShoppingCart/>
-            </div>
             <div className='icon'>
               <Search/>
             </div>

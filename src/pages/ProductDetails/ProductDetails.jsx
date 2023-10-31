@@ -78,6 +78,7 @@ const ProductDetails = () => {
               <Add/>
             </div>
             <button onClick={addToCartHandle}>ADD TO CART</button>
+            
           </div>
         </div>      
     </div>

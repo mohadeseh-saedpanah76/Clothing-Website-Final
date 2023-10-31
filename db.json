@@ -14,7 +14,8 @@
       "size2":"S",
       "size3":"M",
       "size4":"L",
-      "size5":"XL"
+      "size5":"XL",
+      "amount" :10
     },
     {
       "id": 2,
@@ -30,7 +31,8 @@
       "size2":"S",
       "size3":"M",
       "size4":"L",
-      "size5":"XL"
+      "size5":"XL",
+      "amount" :10
     },
     {
       "id": 3,
@@ -46,7 +48,8 @@
       "size2":"S",
       "size3":"M",
       "size4":"L",
-      "size5":"XL"
+      "size5":"XL",
+      "amount" :10
     },
     {
       "id": 4,
@@ -62,7 +65,8 @@
       "size2":"S",
       "size3":"M",
       "size4":"L",
-      "size5":"XL"
+      "size5":"XL",
+      "amount" :10
     },
     {
       "id": 5,
@@ -78,7 +82,8 @@
       "size2":"S",
       "size3":"M",
       "size4":"L",
-      "size5":"XL"
+      "size5":"XL",
+      "amount" :10
     },
     {
       "id": 6,
@@ -94,7 +99,8 @@
       "size2":"S",
       "size3":"M",
       "size4":"L",
-      "size5":"XL"
+      "size5":"XL",
+      "amount" :10
     },
     {
       "id": 7,
@@ -110,7 +116,8 @@
       "size2":"S",
       "size3":"M",
       "size4":"L",
-      "size5":"XL"
+      "size5":"XL",
+      "amount" :10
     },
     {
       "id":8,
@@ -126,7 +133,8 @@
       "size2":"S",
       "size3":"M",
       "size4":"L",
-      "size5":"XL"
+      "size5":"XL",
+      "amount" :10
     }
   ]
 }

@@ -90,7 +90,7 @@ const Cart = () => {
             <div className='cart-summary'>
               <h1>ORDER SUMMARY</h1>
               <div className='summary-item'>
-                <span> Total: {cartItems.reduce((acc , item)=> acc + item.price , 0)}</span>
+                <span> Total: {cartItems.reduce((acc , item)=> acc + item.price ,0)}</span>
                 <span></span>
               </div>
               <button>CHECKOUT NOW</button>
