@@ -1,4 +1,4 @@
-import { Add, Remove } from '@mui/icons-material'
+import { Add, InsertEmoticon, Remove } from '@mui/icons-material'
 
 import React , { useEffect} from 'react'
 import { useParams, redirect, useNavigate } from 'react-router-dom'
@@ -51,7 +51,7 @@ const ProductDetails = () => {
               {product.desc}
           </p>
           <span>
-            {product.price}
+            {product.price}$
           </span>
           <div className='filter-container'>
             <div className='filter-item'>
@@ -74,7 +74,7 @@ const ProductDetails = () => {
           <div className='add-container'>
             <div className='amount-container'>
               <Remove/>
-              <span>1</span>
+              <span>{product.amount}</span>
               <Add/>
             </div>
             <button onClick={addToCartHandle}>ADD TO CART</button>

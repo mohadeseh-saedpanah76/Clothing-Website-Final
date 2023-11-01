@@ -19,9 +19,6 @@ const Product = ({item}) => {
               <FavoriteRounded/>
             </div>
          </div>
-         {/* <h3>
-          {item.title}
-        </h3> */}
         </div>
       
     </div>

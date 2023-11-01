@@ -1,6 +1,7 @@
 .navbar-container{
     height: 60px;
     position: relative;
+
 }
 
 .wrapper{
@@ -8,6 +9,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    
 }
 
 /* ============ Navbar Left ============ */
@@ -109,14 +111,25 @@
     width: auto;
     height: auto;
     position: absolute;
-    background-color: teal;
+    background-color: rgb(60, 114, 114);
     top: 2;
     right: 0;
     z-index: 2;
     opacity: 1; 
-    padding: 1rem 0;
+    padding: 1rem 2rem;
+    border-radius: 8px;
 }
 
+.cloth-sidebar{
+    color: white;
+    cursor: pointer;
+}
+
+.shopping-cart-sidebar .empty-cart{
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+}
 .shopping-cart-sidebar h3{
     color: white;
     text-align: center;
@@ -141,5 +154,19 @@
 
 .shopping-cart-sidebar .container-product{
     border: none;
+}
+
+.total-price{
+    text-align: center;
+    color: white;
+}
+
+.view-shopping-cart{
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: .25rem;
+    padding: .5rem;
+    margin: .5rem auto;
+    display: flex;
 }
 

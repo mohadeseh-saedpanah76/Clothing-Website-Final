@@ -34,6 +34,7 @@ const Cart = () => {
  }
 
   
+
  return (
     <div className='cart-container'>
       <Announcement/>
@@ -68,11 +69,11 @@ const Cart = () => {
                 <div className='price-detail'>
                   <div className='amount-container'>
                     <Add/>
-                    <div className='product-amount'>1</div>
+                    <div className='product-amount'>{item.amount}</div>
                     <Remove/>
                   </div>
                   <div>
-                   <span className='product-price'>{item.price}</span>
+                   <span className='product-price'>{item.price * item.amount}$</span>
                   </div>
                   <div>
                     <button onClick={()=> removeFromCartHandler(item.product)}>
@@ -90,7 +91,7 @@ const Cart = () => {
             <div className='cart-summary'>
               <h1>ORDER SUMMARY</h1>
               <div className='summary-item'>
-                <span> Total: {cartItems.reduce((acc , item)=> acc + item.price ,0)}</span>
+                <span> Total: {cartItems.reduce((acc , item)=> acc + item.price * item.amount ,0)}$</span>
                 <span></span>
               </div>
               <button>CHECKOUT NOW</button>
