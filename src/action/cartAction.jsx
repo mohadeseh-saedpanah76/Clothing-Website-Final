@@ -30,3 +30,4 @@ export const removeFromCart = (id) => (dispatch , getState) =>{
     localStorage.setItem('cartItems' , JSON.stringify(getState().cart.cartItems))
 
 }
+

@@ -28,6 +28,8 @@ const Navbar = () => {
 
  const {cartItems} = cart
 
+
+ 
  const showSidebarHandle = () =>{
   setShowSidebar(true)
  }

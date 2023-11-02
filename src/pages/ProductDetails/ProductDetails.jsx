@@ -1,7 +1,7 @@
-import { Add, InsertEmoticon, Remove } from '@mui/icons-material'
+import { Add, Remove } from '@mui/icons-material'
 
 import React , { useEffect} from 'react'
-import { useParams, redirect, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 
 import { useSelector , useDispatch } from 'react-redux'
@@ -10,7 +10,7 @@ import { useSelector , useDispatch } from 'react-redux'
 import { productDetailsAction } from '../../action/productAction'
 
 import Announcement from '../../components/Announcement/Announcement'
-import { FilterColor } from '../../components/FilterColor/FilterColor'
+
 import Navbar from '../../components/Navbar/Navbar'
 
 import './ProductDetails.css'
@@ -43,7 +43,7 @@ const ProductDetails = () => {
        {loading ? <Loading> درحال دریافت محصولات</Loading> :
           <div className='product-wrapper'>
           <div className='img-container'>
-              <img src={product.url}/>
+              <img src={product.url} alt="product img"/>
           </div>
           <div className='info-container-product'>
           <h1>{product.title}</h1>
@@ -53,7 +53,9 @@ const ProductDetails = () => {
           <span>
             {product.price}$
           </span>
-          <div className='filter-container'>
+
+
+          {/* <div className='filter-container'>
             <div className='filter-item'>
               <span>Color</span>
               <FilterColor color={product.color1}/>
@@ -70,7 +72,9 @@ const ProductDetails = () => {
                 <option>{product.size5}</option>
               </select>
             </div>
-          </div>
+          </div> */}
+
+
           <div className='add-container'>
             <div className='amount-container'>
               <Remove/>
