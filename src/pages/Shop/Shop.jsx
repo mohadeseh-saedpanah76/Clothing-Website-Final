@@ -36,7 +36,7 @@ const Shop = () => {
         SHOPPING
       </h1>
       <div className='filter-container'>
-        <div className='filter-item'>
+        {/* <div className='filter-item'>
           <span className='filter-text'>
             Filter Products:
           </span>
@@ -59,17 +59,15 @@ const Shop = () => {
             <option>XL</option>
             
           </select>
-        </div>
+        </div> */}
 
         <div className='filter-item'>
         <span className='filter-text'>
             Sort Products:
         </span>
         <select>
-            <option selected>Newset</option>
-            <option>Price (asc)</option>
-            <option>Black (desc)</option>
-            
+            <option selected>Men</option>
+            <option>Women</option>            
           </select>
         </div>
       </div>

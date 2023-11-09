@@ -139,9 +139,18 @@
   ],
   "users": [
     {
-      "name": "mohadeseh",
-      "password": "12345",
+      "name": "saedpanah",
+      "email": "info@gmail.com",
+      "password": "1234",
+      "confirm": "1234",
       "id": 1
+    },
+    {
+      "name": "miladkadkhoda",
+      "email": "milad@gmail.com",
+      "password": "45678",
+      "confirm": "45678",
+      "id": 2
     }
   ]
 }

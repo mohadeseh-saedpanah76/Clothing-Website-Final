@@ -10,9 +10,9 @@ const CategoryItem = ({item}) => {
           {item.title}
         </h1>
 
-        <button>
+        {/* <button>
           SHOP NOW
-        </button>
+        </button> */}
       </div>
     </div>
   )

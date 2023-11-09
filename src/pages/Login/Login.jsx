@@ -1,13 +1,15 @@
 import React , {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Input from '../../components/Input/Input'
 
 import { Link } from 'react-router-dom'
 
 import './Login.css'
-import axios from 'axios'
 
 const Login = () => {
+
+  const history = useNavigate()
 
   const [input , setInput] = useState({
     form : {
@@ -55,6 +57,10 @@ const Login = () => {
 
   }
 
+  const loginHandler = ()=>{
+    history('/')
+  }
+
   const submitHandler = (event)=>{
     event.preventDefault()
 
@@ -64,10 +70,14 @@ const Login = () => {
       formData[item] = input.form[item].value
     }
 
-    axios.post('http://localhost:8000/users' , formData)
-    .then((response)=> {console.log(response)})
-    .catch((err)=>{console.log(err)})
+    // axios.post('http://localhost:8000/users' , formData)
+    // .then((response)=> {console.log(response)})
+    // .catch((err)=>{console.log(err)})
+
+    console.log(formData)
   }
+
+
   return (
     <div className='login-container'>
       <div className='login-wrapper'>
