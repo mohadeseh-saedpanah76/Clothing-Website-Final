@@ -3,7 +3,7 @@
     {
       "id": 1,
       "productId": 93813718293,
-      "title": "Denim Jumpsuit",
+      "title": "jeans",
       "url": "https://www.uplooder.net/img/image/52/2404f30dbbf86c2bdfadf82827010912/productimg1.png",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "price": 20,
@@ -15,12 +15,13 @@
       "size3": "M",
       "size4": "L",
       "size5": "XL",
-      "amount": 1
+      "amount": 1,
+      "category": "men"
     },
     {
       "id": 2,
       "productId": 93813718293,
-      "title": "Denim Jumpsuit",
+      "title": "Shirt",
       "url": "https://www.uplooder.net/img/image/63/83cb673dcd5a0832730f4ff8bbce021e/productimg2.png",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "price": 40,
@@ -32,12 +33,13 @@
       "size3": "M",
       "size4": "L",
       "size5": "XL",
-      "amount": 1
+      "amount": 1,
+      "category": "men"
     },
     {
       "id": 3,
       "productId": 93813718293,
-      "title": "Denim Jumpsuit",
+      "title": "paper",
       "url": "https://www.uplooder.net/img/image/54/ecaa3924f7a0b7f98ad85b3cfa2cb239/productimg3.png",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "price": 70,
@@ -49,12 +51,13 @@
       "size3": "M",
       "size4": "L",
       "size5": "XL",
-      "amount": 1
+      "amount": 1,
+      "category": "women"
     },
     {
       "id": 4,
       "productId": 93813718293,
-      "title": "Denim Jumpsuit",
+      "title": "Pants",
       "url": "https://www.uplooder.net/img/image/54/5226826b72412718e5b70c00def2a8f9/productimg4.png",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "price": 25,
@@ -66,12 +69,13 @@
       "size3": "M",
       "size4": "L",
       "size5": "XL",
-      "amount": 1
+      "amount": 1,
+      "category": "women"
     },
     {
       "id": 5,
       "productId": 93813718293,
-      "title": "Denim Jumpsuit",
+      "title": "T-shirt",
       "url": "https://www.uplooder.net/img/image/51/59673ddb449aecb3dc14f7c6035fce06/productimg5.png",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "price": 50,
@@ -83,12 +87,13 @@
       "size3": "M",
       "size4": "L",
       "size5": "XL",
-      "amount": 1
+      "amount": 1,
+      "category": "men"
     },
     {
       "id": 6,
       "productId": 93813718293,
-      "title": "Denim Jumpsuit",
+      "title": "T-shirt",
       "url": "https://www.uplooder.net/img/image/15/bfe3d27b6cebfca06540e0127382eada/productimg6.png",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "price": 85,
@@ -100,12 +105,13 @@
       "size3": "M",
       "size4": "L",
       "size5": "XL",
-      "amount": 1
+      "amount": 1,
+      "category": "men"
     },
     {
       "id": 7,
       "productId": 93813718293,
-      "title": "Denim Jumpsuit",
+      "title": "Coat",
       "url": "https://www.uplooder.net/img/image/84/d84773bbba547ca2d314c354e1bb7b7a/productimg7.png",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "price": 20,
@@ -117,12 +123,13 @@
       "size3": "M",
       "size4": "L",
       "size5": "XL",
-      "amount": 1
+      "amount": 1,
+      "category": "women"
     },
     {
       "id": 8,
       "productId": 93813718293,
-      "title": "Denim Jumpsuit",
+      "title": "Coat",
       "url": "https://www.uplooder.net/img/image/5/c3e365102cfed8faafee0afd65560259/productimg8.png",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "price": 100,
@@ -134,7 +141,8 @@
       "size3": "M",
       "size4": "L",
       "size5": "XL",
-      "amount": 1
+      "amount": 1,
+      "category": "women"
     }
   ],
   "users": [

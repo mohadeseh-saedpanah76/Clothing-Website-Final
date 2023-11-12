@@ -10,7 +10,7 @@ import { productListAction } from "../../action/productAction"
 
 import './Products.css'
 
-const Products = () => {
+const Products = ({search}) => {
   
   const dispatch = useDispatch()
   
@@ -28,13 +28,16 @@ const Products = () => {
   return (
     <div className="products-container">
     {loading ? <Loading> در حال دریافت محصولات</Loading>: 
-      products.map((item)=>{
-        return (
-          <Link to={`/product/${item.id}`}>
-            <Product item={item} key={item.id}/>
-          </Link>
-        )
-      })}
+        products.filter((item)=>{
+          return (search.toLowerCase == "" ? item : item.title.toLowerCase().includes(search))
+        })
+        .map((item)=>{
+          return (
+            <Link to={`/product/${item.id}`}>
+              <Product item={item} key={item.id}/>
+            </Link>
+           )
+        })}
     </div>
   )
 }

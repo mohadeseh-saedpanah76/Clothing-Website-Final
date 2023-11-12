@@ -10,7 +10,7 @@ import { addToCart , removeFromCart} from '../../action/cartAction'
 
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({setSearch}) => {
 
  const [showSidebar , setShowSidebar] = useState(false)
 
@@ -51,7 +51,7 @@ const Navbar = () => {
         <span>EN</span>
 
         <div className='search-container'>
-          <input/>
+          <input placeholder='search here...' onChange={setSearch}/>
           <Search style={{color:'gray', fontSize:18 , margin:'.5rem' }}/>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React ,{ useEffect} from 'react'
+import React ,{ useEffect , useState} from 'react'
 
 import { useSelector , useDispatch } from 'react-redux'
 
@@ -15,6 +15,9 @@ import './Shop.css'
 import { Link } from 'react-router-dom'
 
 const Shop = () => {
+
+  const [search , setSearch] = useState("")
+
   const dispatch = useDispatch()
   
 
@@ -31,7 +34,7 @@ const Shop = () => {
   return (
     <div>
       <Announcement/>
-      <Navbar/>
+      <Navbar setSearch={(e)=>setSearch(e.target.value)}/>
       <h1 className='shop-text'>
         SHOPPING
       </h1>
@@ -73,7 +76,10 @@ const Shop = () => {
       </div>
       <div className='shop-container'>
         {loading ? <Loading> در حال دریافت محصولات</Loading>: 
-        products.map((item)=>{
+        products.filter((item)=>{
+          return (search.toLowerCase == "" ? item : item.title.toLowerCase().includes(search))
+        })
+        .map((item)=>{
           return (
             <Link to={`/product/${item.id}`}>
               <Product item={item} key={item.id}/>

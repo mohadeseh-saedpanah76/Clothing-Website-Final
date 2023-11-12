@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 import Announcement from '../../components/Announcement/Announcement'
 import Categories from '../../components/Categories/Categories'
@@ -9,13 +9,14 @@ import Slider from '../../components/Slider/Slider'
 import Products from '../../components/Products/Products'
 
 const Home = () => {
+  const [search , setSearch] = useState("")
   return (
     <div>
       <Announcement/>
-      <Navbar/>
+      <Navbar setSearch={(e)=>setSearch(e.target.value)}/>
       <Slider/>
       <Categories/>
-      <Products/>
+      <Products search={search}/>
       <Newsletter/>
       <Footer/>
     </div>
