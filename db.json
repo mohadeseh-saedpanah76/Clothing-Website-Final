@@ -52,7 +52,7 @@
       "size4": "L",
       "size5": "XL",
       "amount": 1,
-      "category": "women"
+      "category": "female"
     },
     {
       "id": 4,
@@ -70,7 +70,7 @@
       "size4": "L",
       "size5": "XL",
       "amount": 1,
-      "category": "women"
+      "category": "female"
     },
     {
       "id": 5,
@@ -124,7 +124,7 @@
       "size4": "L",
       "size5": "XL",
       "amount": 1,
-      "category": "women"
+      "category": "female"
     },
     {
       "id": 8,
@@ -142,7 +142,7 @@
       "size4": "L",
       "size5": "XL",
       "amount": 1,
-      "category": "women"
+      "category": "female"
     }
   ],
   "users": [

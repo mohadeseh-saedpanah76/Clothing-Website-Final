@@ -2,7 +2,6 @@ import React ,{ useEffect , useState} from 'react'
 
 import { useSelector , useDispatch } from 'react-redux'
 
-import Announcement from '../../components/Announcement/Announcement'
 import Navbar from '../../components/Navbar/Navbar'
 import Newsletter from '../../components/Newsletter/Newsletter'
 import Footer from '../../components/Footer/Footer'
@@ -18,6 +17,8 @@ const Shop = () => {
 
   const [search , setSearch] = useState("")
 
+  const [select , setSelect] = useState("")
+
   const dispatch = useDispatch()
   
 
@@ -30,10 +31,11 @@ const Shop = () => {
     dispatch(productListAction())
 
   },[dispatch])
+
+
  
   return (
     <div>
-      <Announcement/>
       <Navbar setSearch={(e)=>setSearch(e.target.value)}/>
       <h1 className='shop-text'>
         SHOPPING
@@ -68,9 +70,10 @@ const Shop = () => {
         <span className='filter-text'>
             Sort Products:
         </span>
-        <select>
-            <option selected>Men</option>
-            <option>Women</option>            
+        <select onChange={(e)=>setSelect(e.target.value)} value={select}>
+            <option value="">choose a category</option>
+            <option value="female">Women</option>
+            <option  value="men">Men</option>            
           </select>
         </div>
       </div>
@@ -79,13 +82,18 @@ const Shop = () => {
         products.filter((item)=>{
           return (search.toLowerCase == "" ? item : item.title.toLowerCase().includes(search))
         })
+        .filter((item)=>{
+          return (select.toLowerCase == "" ? item : item.category.toLowerCase().includes(select))
+        })
         .map((item)=>{
           return (
             <Link to={`/product/${item.id}`}>
               <Product item={item} key={item.id}/>
             </Link>
            )
-        })}
+        })
+        
+      }
       </div>
 
       <Newsletter/>

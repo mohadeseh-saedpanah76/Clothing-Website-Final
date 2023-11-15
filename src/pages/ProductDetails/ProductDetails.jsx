@@ -9,8 +9,6 @@ import { useSelector , useDispatch } from 'react-redux'
 
 import { productDetailsAction } from '../../action/productAction'
 
-import Announcement from '../../components/Announcement/Announcement'
-
 import Navbar from '../../components/Navbar/Navbar'
 
 import './ProductDetails.css'
@@ -39,7 +37,6 @@ const ProductDetails = () => {
   return (
     <div>
       <Navbar/>
-      <Announcement/>
        {loading ? <Loading> درحال دریافت محصولات</Loading> :
           <div className='product-wrapper'>
           <div className='img-container'>

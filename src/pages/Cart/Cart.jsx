@@ -1,6 +1,5 @@
 import { Add ,HighlightOff, Remove } from '@mui/icons-material'
 import React from 'react'
-import Announcement from '../../components/Announcement/Announcement'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import { TopButton } from '../../components/TopButton/TopButton'
@@ -37,7 +36,6 @@ const Cart = () => {
 
  return (
     <div className='cart-container'>
-      <Announcement/>
       <Navbar/>
       <div className='cart-wrapper'>
         <h1>
