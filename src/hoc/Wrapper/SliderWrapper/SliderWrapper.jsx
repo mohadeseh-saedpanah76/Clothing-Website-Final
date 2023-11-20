@@ -6,10 +6,10 @@ import {Slide} from '../../../styledComponents/slider/Slide'
 
 import './SliderWrapper.css'
 
-const SliderWrapper = ({product , slideindex}) => {
+const SliderWrapper = ({product , slideindex ,className}) => {
   return (
-    <Wrapper slideindex={slideindex}>
-        <Slide bg={product.bg}>
+    <Wrapper slideindex={slideindex} className={className}>
+        <Slide bg={product.bg} >
             <div className='image-Container'>
                <img src={product.image}></img>
             </div>

@@ -6,4 +6,5 @@ export const Slide = styled.div`
     display:flex;
     align-items:center;
     background-color: #${({bg})=>bg};
+
 `

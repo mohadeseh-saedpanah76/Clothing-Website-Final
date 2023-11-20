@@ -5,3 +5,10 @@
     position: relative;
     overflow: hidden;
 }
+
+@media (max-width : 420px) {
+    .slider-items  {
+        width: 100vw;
+        
+    }
+ }

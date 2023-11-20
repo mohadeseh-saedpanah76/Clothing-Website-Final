@@ -31,7 +31,7 @@ const Slider = () => {
       </Arrow>
 
       {sliderItems.map((item)=>{
-        return <SliderWrapper slideindex={slideIndex} product={item} key={item.id} />
+        return <SliderWrapper slideindex={slideIndex} product={item} key={item.id} className="slider-items"/>
       })}
 
       <Arrow direction='right' onClick={()=>sliderHandler('right')}>

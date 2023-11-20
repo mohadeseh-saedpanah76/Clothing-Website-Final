@@ -3,6 +3,7 @@
     margin: 3px;
     height: 70vh;
     position: relative;
+
 }
 
 .categoryitem-container img{
@@ -36,3 +37,12 @@
     cursor: pointer;
     font-weight: 600;
 } */
+
+
+/* ============= mobile ============= */
+
+@media (max-width : 420px){
+    .categoryitem-container{
+        width: 100%;
+    }
+}

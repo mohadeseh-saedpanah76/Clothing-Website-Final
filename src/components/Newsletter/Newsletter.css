@@ -39,3 +39,14 @@
     background-color: teal;
     color: white;
 }
+
+
+/* ============= mobile ============= */
+
+@media (max-width:420px){
+
+    .newsletter-container{
+        padding: 2rem;
+        width: 100%;
+    }
+}
