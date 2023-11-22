@@ -2,13 +2,14 @@ import { useEffect , useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import { Add, Close, HighlightOff, Remove, Search,ShoppingCart  } from '@mui/icons-material'
+import { Add, Close, HighlightOff, Menu, Remove, Search,ShoppingCart  } from '@mui/icons-material'
 
 import {Link} from 'react-router-dom'
 
 import { addToCart , removeFromCart} from '../../action/cartAction'
 
 import './Navbar.css'
+
 
 const Navbar = ({setSearch}) => {
 
@@ -80,6 +81,9 @@ const Navbar = ({setSearch}) => {
           </Link> */}
               <ShoppingCart className='shopping-cart' />
               <span className='cart-item'>{cartItems.length}</span>
+          </div>
+          <div className='hamburger-menu'>
+            <Menu/>
           </div>
  
       </div>

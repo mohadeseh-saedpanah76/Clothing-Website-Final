@@ -7,7 +7,6 @@
     width: 100%;
     background-color: white;
 
-
 }
 
 .wrapper{
@@ -111,6 +110,9 @@
     font-weight: bold;
 }
 
+.hamburger-menu{
+    display: none;
+}
 
 /* ============= shopping-cart-sidebar ============= */
 
@@ -177,3 +179,17 @@
     display: flex;
 }
 
+
+/* ============= mobile ============= */
+
+@media (max-width:420px){
+    .hamburger-menu{
+        display: flex;
+    }
+    .wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+        z-index:1000;
+        height: 60px;
+    }
+}
