@@ -3,7 +3,6 @@
     position: fixed;
     top: 0;
     z-index: 99;
-    overflow: hidden;
     width: 100%;
     background-color: white;
 
@@ -17,6 +16,11 @@
     
 }
 
+.hamburger-menu{
+    display: none;
+}
+
+
 /* ============ Navbar Left ============ */
 
 .navbar-left{
@@ -25,11 +29,6 @@
     align-items: center;
 }
 
-.navbar-left span{
-    font-size: 14px;
-    padding-right: .75rem;;
-    cursor: pointer;
-}
 
 .search-container{
     display: flex;
@@ -110,9 +109,6 @@
     font-weight: bold;
 }
 
-.hamburger-menu{
-    display: none;
-}
 
 /* ============= shopping-cart-sidebar ============= */
 
@@ -186,10 +182,34 @@
     .hamburger-menu{
         display: flex;
     }
+
     .wrapper{
+        display: none;
+    }
+    
+    .responsive-wrapper.open{
         flex-direction: column;
         align-items: flex-start;
-        z-index:1000;
-        height: 60px;
+        justify-content:space-between;
+        height: 250px;
+        width: 100%;
+        background-color: white;
+        padding: 1rem;
+    }
+
+    .navbar-right{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .menu-item{
+        width: 100%;
+        padding: 1rem;
+
+    }
+
+    .navbar-center{
+        display: none;
     }
 }

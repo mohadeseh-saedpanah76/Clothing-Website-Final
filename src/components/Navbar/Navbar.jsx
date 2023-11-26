@@ -15,6 +15,8 @@ const Navbar = ({setSearch}) => {
 
  const [showSidebar , setShowSidebar] = useState(false)
 
+ const [menuOpen , setMenuOpen] = useState(false)
+
  const {id} = useParams()
  
  const dispatch  = useDispatch()
@@ -47,9 +49,12 @@ const Navbar = ({setSearch}) => {
   return (
     <div className='navbar-container'>
 
-      <div className='wrapper'>
+      <div className='hamburger-menu' onClick={()=>setMenuOpen(!menuOpen)}>
+            <Menu/>
+      </div>
+      
+      <div className="wrapper">
       <div className='navbar-left'>
-        <span>EN</span>
 
         <div className='search-container'>
           <input placeholder='search here...' onChange={setSearch}/>
@@ -82,12 +87,53 @@ const Navbar = ({setSearch}) => {
               <ShoppingCart className='shopping-cart' />
               <span className='cart-item'>{cartItems.length}</span>
           </div>
-          <div className='hamburger-menu'>
-            <Menu/>
-          </div>
+        
  
       </div>
       </div>
+
+
+      {/* ============= Responsive ============ */}
+
+      <div className={`responsive-wrapper ${menuOpen ? "open" : ""}`}>
+      <div className='navbar-left'>
+
+        <div className='search-container'>
+          <input placeholder='search here...' onChange={setSearch}/>
+          <Search style={{color:'gray', fontSize:18 , margin:'.5rem' }}/>
+        </div>
+      </div>
+
+      <div className='navbar-center'>
+        <a href='/'>
+          <h1>
+            LAMA.
+          </h1>
+        </a>
+      </div>
+
+      <div className='navbar-right'>
+          <div className='menu-item'>
+            <Link to='/register' style={{color:'black' , textDecoration:'none'}}>REGISTER</Link>
+          </div>
+          
+          <div className='menu-item'>
+          <Link to='/login' style={{color:'black' , textDecoration:'none'}}>SIGN IN</Link>
+          </div>
+          
+          <div className='menu-item cart-item-container' onClick={showSidebarHandle} >
+            {/* <Link style={{color:'black' , textDecoration:'none'}} to='/cart'>
+                <ShoppingCart className='shopping-cart' />
+                <span className='cart-item'>{cartItems.length}</span>
+          </Link> */}
+              <ShoppingCart className='shopping-cart' />
+              <span className='cart-item'>{cartItems.length}</span>
+          </div>
+        
+ 
+      </div>
+      </div>
+
 
       {/* ======== shopping cart sidebar ======== */}
       <div>
