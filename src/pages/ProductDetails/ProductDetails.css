@@ -96,3 +96,19 @@
 .add-container button:hover{
     background-color: #e9e3e3;
 }
+
+
+/* ============= mobile ============= */
+
+@media (max-width:450px){
+
+    .product-wrapper{
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .img-container img{
+        height: 40vh;
+    }
+   
+}

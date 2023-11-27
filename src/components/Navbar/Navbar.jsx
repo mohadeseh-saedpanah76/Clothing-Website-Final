@@ -120,6 +120,10 @@ const Navbar = ({setSearch}) => {
           <div className='menu-item'>
           <Link to='/login' style={{color:'black' , textDecoration:'none'}}>SIGN IN</Link>
           </div>
+
+          <div className='menu-item'>
+            <Link to='/products' style={{color:'black' , textDecoration:'none'}}>SHOPPING</Link>
+          </div>
           
           <div className='menu-item cart-item-container' onClick={showSidebarHandle} >
             {/* <Link style={{color:'black' , textDecoration:'none'}} to='/cart'>

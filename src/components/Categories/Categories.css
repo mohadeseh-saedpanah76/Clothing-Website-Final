@@ -7,8 +7,9 @@
 
 /* ============= mobile ============= */
 
-@media (max-width : 420px){
+@media (max-width : 450px){
     .categories-container{
         flex-direction: column;
+        padding: 0;
     }
 }

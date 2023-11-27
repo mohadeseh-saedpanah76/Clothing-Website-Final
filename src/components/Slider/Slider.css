@@ -6,9 +6,8 @@
     overflow: hidden;
 }
 
-@media (max-width : 420px) {
-    .slider-items  {
-        width: 100vw;
-        
-    }
- }
+@media (max-width : 450px) {
+  .slider-container{
+    display: none;
+  }
+}

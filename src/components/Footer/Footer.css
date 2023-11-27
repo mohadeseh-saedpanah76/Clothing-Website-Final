@@ -68,3 +68,19 @@
 .payment{
     width: 50%;
 }
+
+
+
+/* ============= mobile ============= */
+
+@media (max-width:450px){
+
+    .footer-container{
+        flex-direction: column;
+    }
+
+    .footer-container .right{
+        background-color: #fff8f8;
+    }
+
+}

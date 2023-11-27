@@ -45,3 +45,10 @@
     color: white;
     cursor: pointer;
 }
+
+@media (max-width:450px){
+ 
+    .register-wrapper{
+        width: 75%;
+    }
+}

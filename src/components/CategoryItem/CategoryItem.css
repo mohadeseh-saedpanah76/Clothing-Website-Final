@@ -41,8 +41,9 @@
 
 /* ============= mobile ============= */
 
-@media (max-width : 420px){
-    .categoryitem-container{
-        width: 100%;
+@media (max-width : 450px){
+    .categoryitem-container img{
+        height: 50vh;
+        object-fit: cover;
     }
 }
