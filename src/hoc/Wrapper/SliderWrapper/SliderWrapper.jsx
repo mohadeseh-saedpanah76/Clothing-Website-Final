@@ -11,7 +11,7 @@ const SliderWrapper = ({product , slideindex ,className}) => {
     <Wrapper slideindex={slideindex} className={className}>
         <Slide bg={product.bg} >
             <div className='image-Container'>
-               <img src={product.image}></img>
+               <img src={product.image} alt="product img"></img>
             </div>
             <div className='info-container'>
                 <h1>

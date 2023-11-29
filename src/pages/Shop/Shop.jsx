@@ -80,10 +80,10 @@ const Shop = () => {
       <div className='shop-container'>
         {loading ? <Loading> در حال دریافت محصولات</Loading>: 
         products.filter((item)=>{
-          return (search.toLowerCase == "" ? item : item.title.toLowerCase().includes(search))
+          return (search.toLowerCase === "" ? item : item.title.toLowerCase().includes(search))
         })
         .filter((item)=>{
-          return (select.toLowerCase == "" ? item : item.category.toLowerCase().includes(select))
+          return (select.toLowerCase === "" ? item : item.category.toLowerCase().includes(select))
         })
         .map((item)=>{
           return (

@@ -9,7 +9,7 @@ const Product = ({item}) => {
   return (
     <div className='product-container'>
       <div className='circle'></div>
-        <img src={item.url} className='product-img'/>
+        <img src={item.url} className='product-img' alt="product img"/>
         <div className='info'>
          <div className='icon-list'>
             <div className='icon'>

@@ -137,3 +137,25 @@
     color: white;
     font-weight: 600;
 }
+
+
+/* ============= mobile ============= */
+
+@media (max-width:450px){
+   
+    .cart-bottom{
+        flex-direction: column;
+    }
+   .top-text{
+    display: none;
+   }
+
+   .container-product{
+    flex-direction: column;
+    margin: 2rem 0;
+   }
+
+   .price-detail{
+    margin:2rem;
+   }
+}

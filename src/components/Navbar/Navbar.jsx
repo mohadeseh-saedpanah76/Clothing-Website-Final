@@ -154,7 +154,7 @@ const Navbar = ({setSearch}) => {
                 {cartItems.map((item)=>(
                   <div className='container-product' key={item.product}>
                   <div className='product-detail'>
-                    <img src={item.image}/>
+                    <img src={item.image} alt="product img"/>
                   </div>
                   <div className='price-detail'>
                     <div className='amount-container'>

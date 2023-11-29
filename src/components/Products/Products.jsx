@@ -29,7 +29,7 @@ const Products = ({search}) => {
     <div className="products-container">
     {loading ? <Loading> در حال دریافت محصولات</Loading>: 
         products.filter((item)=>{
-          return (search.toLowerCase == "" ? item : item.title.toLowerCase().includes(search))
+          return (search.toLowerCase === "" ? item : item.title.toLowerCase().includes(search))
         })
         .map((item)=>{
           return (

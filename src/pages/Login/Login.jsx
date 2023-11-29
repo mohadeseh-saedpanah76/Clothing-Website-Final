@@ -1,5 +1,4 @@
 import React , {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
 
 import Input from '../../components/Input/Input'
 
@@ -8,8 +7,6 @@ import { Link } from 'react-router-dom'
 import './Login.css'
 
 const Login = () => {
-
-  const history = useNavigate()
 
   const [input , setInput] = useState({
     form : {
@@ -55,10 +52,6 @@ const Login = () => {
 
    setInput({form : updatedForm})
 
-  }
-
-  const loginHandler = ()=>{
-    history('/')
   }
 
   const submitHandler = (event)=>{

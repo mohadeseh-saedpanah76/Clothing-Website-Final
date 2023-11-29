@@ -80,7 +80,6 @@ const Register = () => {
   return (
     <div className='register-container'>
       <div className='register-wrapper'>
-        <h1 className='register-title'></h1>
           <form className='register-form' onSubmit={(event)=>submitHandler(event)}>
             {elementArray.map((item)=>(
             <Input

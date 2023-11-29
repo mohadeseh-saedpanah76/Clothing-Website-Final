@@ -107,8 +107,23 @@
         padding: 30px;
     }
 
+    .img-container{
+        background-color: lightgray;
+    }
+
     .img-container img{
-        height: 40vh;
+        height: 55vh;
+        width: 75%;
+        margin: 0 3rem ;
+    }
+
+    .info-container-product{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .add-container{
+        width: 100%;
     }
    
 }

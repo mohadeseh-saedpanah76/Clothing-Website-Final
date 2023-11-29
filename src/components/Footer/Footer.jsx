@@ -67,7 +67,7 @@ const Footer = () => {
           <Mail style={{marginRight:'20px'}}/>
           contact@lama.dev
         </div>
-        <img src={imgpayment} className='payment'/>
+        <img src={imgpayment} className='payment' alt='payment'/>
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import './CategoryItem.css'
 const CategoryItem = ({item}) => {
   return (
     <div className='categoryitem-container'>
-      <img src={item.image}/>
+      <img src={item.image} alt="category img"/>
 
       <div className='categoryitem-info'>
         <h1>
