@@ -2,18 +2,18 @@ import { useEffect , useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import { Add, Close, HighlightOff, Menu, Remove, Search,ShoppingCart  } from '@mui/icons-material'
+import { Menu,  Search,ShoppingCart  } from '@mui/icons-material'
 
 import {Link} from 'react-router-dom'
 
-import { addToCart , removeFromCart} from '../../action/cartAction'
+import { addToCart } from '../../action/cartAction'
 
 import './Navbar.css'
 
 
 const Navbar = ({setSearch}) => {
 
- const [showSidebar , setShowSidebar] = useState(false)
+//  const [showSidebar , setShowSidebar] = useState(false)
 
  const [menuOpen , setMenuOpen] = useState(false)
 
@@ -33,17 +33,17 @@ const Navbar = ({setSearch}) => {
 
 
  
- const showSidebarHandle = () =>{
-  setShowSidebar(true)
- }
+//  const showSidebarHandle = () =>{
+//   setShowSidebar(true)
+//  }
  
- const hideSidebarHandle = () =>{
-  setShowSidebar(false)
- }
+//  const hideSidebarHandle = () =>{
+//   setShowSidebar(false)
+//  }
 
- const removeFromCartHandler =(id)=>{
-  dispatch(removeFromCart(id))
-}
+//  const removeFromCartHandler =(id)=>{
+//   dispatch(removeFromCart(id))
+// }
 
 
   return (
@@ -53,49 +53,7 @@ const Navbar = ({setSearch}) => {
             <Menu/>
       </div>
       
-      <div className="wrapper">
-      <div className='navbar-left'>
-
-        <div className='search-container'>
-          <input placeholder='search here...' onChange={setSearch}/>
-          <Search style={{color:'gray', fontSize:18 , margin:'.5rem' }}/>
-        </div>
-      </div>
-
-      <div className='navbar-center'>
-        <a href='/'>
-          <h1>
-            LAMA.
-          </h1>
-        </a>
-      </div>
-
-      <div className='navbar-right'>
-          <div className='menu-item'>
-            <Link to='/register' style={{color:'black' , textDecoration:'none'}}>REGISTER</Link>
-          </div>
-          
-          <div className='menu-item'>
-          <Link to='/login' style={{color:'black' , textDecoration:'none'}}>SIGN IN</Link>
-          </div>
-          
-          <div className='menu-item cart-item-container' onClick={showSidebarHandle} >
-            {/* <Link style={{color:'black' , textDecoration:'none'}} to='/cart'>
-                <ShoppingCart className='shopping-cart' />
-                <span className='cart-item'>{cartItems.length}</span>
-          </Link> */}
-              <ShoppingCart className='shopping-cart' />
-              <span className='cart-item'>{cartItems.length}</span>
-          </div>
-        
- 
-      </div>
-      </div>
-
-
-      {/* ============= Responsive ============ */}
-
-      <div className={`responsive-wrapper ${menuOpen ? "open" : ""}`}>
+      <div className={`wrapper ${menuOpen ? "open" : ""}`}>
       <div className='navbar-left'>
 
         <div className='search-container'>
@@ -125,13 +83,12 @@ const Navbar = ({setSearch}) => {
             <Link to='/products' style={{color:'black' , textDecoration:'none'}}>SHOPPING</Link>
           </div>
           
-          <div className='menu-item cart-item-container' onClick={showSidebarHandle} >
-            {/* <Link style={{color:'black' , textDecoration:'none'}} to='/cart'>
+          <div className='menu-item cart-item-container' >
+            <Link style={{color:'black' , textDecoration:'none'}} to='/cart'>
                 <ShoppingCart className='shopping-cart' />
                 <span className='cart-item'>{cartItems.length}</span>
-          </Link> */}
-              <ShoppingCart className='shopping-cart' />
-              <span className='cart-item'>{cartItems.length}</span>
+          </Link>
+              
           </div>
         
  
@@ -139,8 +96,53 @@ const Navbar = ({setSearch}) => {
       </div>
 
 
+      {/* ============= Responsive ============ */}
+
+      {/* <div className={`responsive-wrapper ${menuOpen ? "open" : ""}`}>
+      <div className='navbar-left'>
+
+        <div className='search-container'>
+          <input placeholder='search here...' onChange={setSearch}/>
+          <Search style={{color:'gray', fontSize:18 , margin:'.5rem' }}/>
+        </div>
+      </div>
+
+      <div className='navbar-center'>
+        <a href='/'>
+          <h1>
+            LAMA.
+          </h1>
+        </a>
+      </div>
+
+      <div className='navbar-right'>
+          <div className='menu-item'>
+            <Link to='/register' style={{color:'black' , textDecoration:'none'}}>REGISTER</Link>
+          </div>
+          
+          <div className='menu-item'>
+          <Link to='/login' style={{color:'black' , textDecoration:'none'}}>SIGN IN</Link>
+          </div>
+
+          <div className='menu-item'>
+            <Link to='/products' style={{color:'black' , textDecoration:'none'}}>SHOPPING</Link>
+          </div>
+          
+          <div className='menu-item cart-item-container' >
+            <Link style={{color:'black' , textDecoration:'none'}} to='/cart'>
+                <ShoppingCart className='shopping-cart' />
+                <span className='cart-item'>{cartItems.length}</span>
+          </Link>
+              
+          </div>
+        
+ 
+      </div>
+      </div> */}
+
+
       {/* ======== shopping cart sidebar ======== */}
-      <div>
+      {/* <div>
         {showSidebar ? (
           <div className='shopping-cart-sidebar'>
           <div onClick={hideSidebarHandle} className="cloth-sidebar">
@@ -189,7 +191,7 @@ const Navbar = ({setSearch}) => {
           
         </div>
         ) : null}
-      </div>
+      </div> */}
       
       
 

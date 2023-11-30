@@ -1,6 +1,7 @@
 .product-wrapper{
     padding: 50px;
     display: flex;
+    margin-top: 3rem;
 }
 
 .img-container{
@@ -107,10 +108,7 @@
         padding: 30px;
     }
 
-    .img-container{
-        background-color: lightgray;
-    }
-
+   
     .img-container img{
         height: 55vh;
         width: 75%;
